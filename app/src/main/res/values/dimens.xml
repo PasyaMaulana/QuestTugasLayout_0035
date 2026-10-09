@@ -11,4 +11,10 @@
     <dimen name="logo_size">64dp</dimen>
     <dimen name="text_margin_horizontal">16dp</dimen>
     <dimen name="text_gap">4dp</dimen>
+
+    <dimen name="font_title">24sp</dimen>
+    <dimen name="font_subtitle">14sp</dimen>
+    <dimen name="font_nama">20sp</dimen>
+    <dimen name="font_detail">14sp</dimen>
+    <dimen name="font_copy">12sp</dimen>
 </resources>
