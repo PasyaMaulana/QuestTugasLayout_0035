@@ -25,6 +25,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 
 @Composable
 fun fontSizeResource(@DimenRes id: Int): TextUnit {
@@ -98,6 +102,73 @@ fun InfoCard(
                 painter = painterResource(gambar),
                 contentDescription = stringResource(R.string.desc_logo),
                 modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+            )
+        }
+    }
+}
+
+@Composable
+fun AktivitasPertama(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(top = dimensionResource(R.dimen.padding_top)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = stringResource(R.string.prodi),
+            fontSize = fontSizeResource(R.dimen.font_title),
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = stringResource(R.string.univ),
+            fontSize = fontSizeResource(R.dimen.font_subtitle),
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_header)))
+
+        InfoCard(
+            nama = R.string.nama_1,
+            alamat = R.string.alamat_1,
+            telepon = R.string.telp_1,
+            warnaCard = R.color.card_1_bg,
+            warnaAlamat = R.color.text_yellow,
+            gambar = R.drawable.logo_umy,
+            namaFontFamily = FontFamily.Cursive,
+            namaFontWeight = FontWeight.Normal
+        )
+        InfoCard(
+            nama = R.string.nama_2,
+            telepon = R.string.telp_2,
+            alamat = R.string.alamat_2,
+            warnaCard = R.color.card_2_bg,
+            warnaAlamat = R.color.text_yellow,
+            gambar = R.drawable.logo_umy
+        )
+        InfoCard(
+            nama = R.string.nama_3,
+            telepon = R.string.telp_3,
+            alamat = R.string.alamat_3,
+            warnaCard = R.color.card_3_bg,
+            warnaAlamat = R.color.text_white,
+            gambar = R.drawable.logo_umy
+        )
+        InfoCard(
+            nama = R.string.nama_4,
+            telepon = R.string.telp_4,
+            alamat = R.string.alamat_4,
+            warnaCard = R.color.card_4_bg,
+            warnaAlamat = R.color.text_white,
+            gambar = R.drawable.logo_umy
+        )
+
+        Box(modifier = Modifier.fillMaxSize()) {
+            Text(
+                text = stringResource(R.string.copy),
+                fontSize = fontSizeResource(R.dimen.font_copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = dimensionResource(R.dimen.padding_bottom))
             )
         }
     }
