@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="padding_top">40dp</dimen>
+    <dimen name="padding_bottom">24dp</dimen>
+    <dimen name="space_header">16dp</dimen>
 
+    <dimen name="card_margin_horizontal">16dp</dimen>
+    <dimen name="card_margin_vertical">6dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="card_corner">12dp</dimen>
+    <dimen name="logo_size">64dp</dimen>
+    <dimen name="text_margin_horizontal">16dp</dimen>
+    <dimen name="text_gap">4dp</dimen>
 </resources>
